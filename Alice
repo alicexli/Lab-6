@@ -1,7 +1,12 @@
 def encoder(password): 
+  digit = 0
   new_password = '' 
   for i in range(8): 
-    new_password += int(password[i,i+1] + 3) 
+    digit = int(password[i,i+1] + 3)
+    if int(digit) > 9:
+      new_password += int(digit[-1])
+    else:
+      new_password += int(digit) 
   return new_password
 
 password = ''
