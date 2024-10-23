@@ -1,0 +1,5 @@
+def encoder(password): 
+  new_password = '' 
+  for i in range(8): 
+    new_password += int(password[i,i+1] + 3) 
+  return new_password
