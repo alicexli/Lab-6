@@ -1,8 +1,8 @@
-def encoder(password): 
+def encoder(password):
   digit = 0
-  new_password = '' 
-  for i in range(8): 
-    digit = int(password[i,i+1]) + 3
+  new_password = ''
+  for i in range(len(password)):
+    digit = int(password[i]) + 3
     if int(digit) > 9:
       new_password += str(digit - 10)
     else:
@@ -16,8 +16,8 @@ while option != 3:
   option = int(input("Please enter an option: "))
   if option == 1:
     password = input("Please enter your password to encode: ")
-    print("Your password has been encoded and stored!")
+    print("Your password has been encoded and stored!\n")
   elif option == 2:
-    print("The encoded password is", encoder(password), "and the original password is", password, ".")
+    print(f"The encoded password is {encoder(password)} and the original password is {password}.\n")
   else:
     quit
