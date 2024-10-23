@@ -3,3 +3,16 @@ def encoder(password):
   for i in range(8): 
     new_password += int(password[i,i+1] + 3) 
   return new_password
+
+password = ''
+option = 0
+while option != 3:
+  print("Menu \n------------- \n1. Encode \n2. Decode \n3. Quit")
+  option = int(input("Please enter an option: "))
+  password = input("Please enter your password to encode: ")
+  if option == 1:
+    print("Your password has been encoded and stored!")
+  elif option == 2:
+    print("The encoded password is", encoder(password), "and the original password is", password, ".")
+  else:
+    quit
