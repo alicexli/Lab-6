@@ -14,8 +14,8 @@ option = 0
 while option != 3:
   print("Menu \n------------- \n1. Encode \n2. Decode \n3. Quit")
   option = int(input("Please enter an option: "))
-  password = input("Please enter your password to encode: ")
   if option == 1:
+    password = input("Please enter your password to encode: ")
     print("Your password has been encoded and stored!")
   elif option == 2:
     print("The encoded password is", encoder(password), "and the original password is", password, ".")
